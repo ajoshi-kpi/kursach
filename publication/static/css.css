@@ -1,0 +1,56 @@
+body
+{
+	background-color:#F0F8FF;
+}
+a
+{
+	font: bold 27px fantasy;
+	text-align: center;
+	color: #191970;
+	letter-spacing: 4px;
+	text-decoration: none;
+}
+.a1
+{
+	font: 22px fantasy;
+	color: #2525a7;
+	letter-spacing: 2px;
+}
+ul li
+{
+	display: inline;
+	padding: 0 110px;
+}
+p
+{
+	font: 18px century gothic;
+	text-indent: 25px;
+	text-align: justify;
+	padding: 0 150px;
+}
+.p1
+{
+	font: 16px century gothic;
+	text-indent: 25px;
+	text-align: justify;
+	padding: 0px;
+}
+h2
+{
+	font: 24px fantasy;
+	text-align: center;
+	color: #2525a7;
+	letter-spacing: 2px;
+}
+h6
+{
+	padding-left: 30px;
+}
+#pub
+{
+	position: center;
+	width:350px; 
+	height:250px; 
+	float: left;
+	padding-left: 75px;
+}

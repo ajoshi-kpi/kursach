@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>БД - {{ name }}</title>
+<link rel="stylesheet" href="{% static "static/css.css" %}" type="text/css"/>
+</head>
+<body>
+<img src="{% static "topimg.png" %}" width="100%">
+<ul width="100%" style="margin-top:0px;">
+<li><a href="/main/all">Головна</a></li>
+<li><a href="/contacts">Контакти</a></li>
+<li><a href="/add">Додати публікацію</a></li>
+</ul>
+<hr>
+
+<form action="/search/" method="get" align="center">
+	<input type="text" name="q">
+	<input type="submit" class="button" value="Пошук">
+</form>
+{% if q %}
+	<p>Ви шукали - {{q}} </p>
+	<p>Результати пошуку:</p>
+{% endif %}
+
+{% for publication in publications %}
+	{% if publication %}
+	<div id="pub">
+	<center><a class="a1" href="/main/get/{{publication.id}}">{{publication.publication_title}}</a><center>
+	<p class="p1">Категорія: {{publication.publication_cat}}</p>
+	<p class="p1">{{publication.publication_short}}</p>
+	<p class="p1">Автор: {{publication.publication_author}}</p>
+	<h6>Дата публікації: {{publication.publication_date}}</h6>
+	</div>
+	{% else %}
+	<p>За Вашим запитом нічого не знайдено:</p>
+	{% endif %}
+{% endfor %}
+
+{% block publication %}
+{% endblock %}
+</body>
+</html>
