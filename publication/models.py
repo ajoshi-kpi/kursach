@@ -9,6 +9,7 @@ class Publication(models.Model):
 	publication_short = models.TextField()
 	publication_text = models.TextField()
 	publication_date = models.DateTimeField()	
+	publication_link = models.TextField()
 	publication_cat = models.TextField(max_length = 30)
 
 class Comments(models.Model):

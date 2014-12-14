@@ -1,9 +1,9 @@
 {% extends 'general.html'%}
 
 {% block publication%}
-
 	<h2>{{publication.publication_title}}</h2>
 	<p>{{publication.publication_text}}</p>
+	<a href="{{publication.publication_link}}">Перейти до публікації</a> 
 	<h6>{{publication.publication_date}}</h6>
 	<hr>
 {% endblock %}
